@@ -5,7 +5,7 @@ document.getElementById('book-set-selector').addEventListener('change', function
 
     // Clear previous content
     bookContent.innerHTML = '';
-
+//
     // Define content for each book set
     const bookSets = {
         set1: `
