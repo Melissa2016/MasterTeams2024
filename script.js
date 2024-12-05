@@ -2,7 +2,7 @@
 document.getElementById('book-set-selector').addEventListener('change', function() {
     let bookSet = this.value;
     let bookContent = document.getElementById('book-content');
-
+//
     // Clear previous content
     bookContent.innerHTML = '';
 //
