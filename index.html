@@ -1,38 +1,72 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>P.A.R.T.S</title>
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
-    <header>
-      <h1>P.A.R.T.S</h1>
-      <p class="vision-statement">
-        "The vision of the project is to support students in becoming confident
-        and fluent readers who develop a love for reading. By reducing cognitive
-        load through predictable text patterns, students are encouraged to
-        engage with reading in a way that feels manageable"
-      </p>
-    </header>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>P.A.R.T.S</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+  <header>
+    <h1>P.A.R.T.S</h1>
+    <p class="vision-statement">
+      "The vision of the project is to support students in becoming confident and fluent readers who develop a love for reading. By reducing cognitive load through predictable text patterns, students are encouraged to engage with reading in a way that feels manageable."
+    </p>
+    <br>
+    <img src="images/cover-image.jpeg" alt="Cover Image" style="width: 90%; height: 70%; max-height: 500px;">
+  </header>
 
-    <nav>
-      <ul class="tabs">
-        <li><a href="how-to-use.html">How to Use</a></li>
-        <li><a href="book-training.html">Book Training</a></li>
-        <li><a href="shop.html">Shop</a></li>
-        <li><a href="about.html">About the Creators</a></li>
-      </ul>
-    </nav>
+  <nav>
+    <ul class="tabs">
+      <li><a href="how-to-use.html">How to Use</a></li>
+      <li><a href="book-training.html">Book Training</a></li>
+      <li><a href="shop.html">Shop</a></li>
+      <li><a href="about.html">About the Creators</a></li>
+    </ul>
+  </nav>
 
-    <main>
-    </main>
-<!---->
-     <!---->
-    <footer>
-      <p>© 2024 P.A.R.T.S</p>
-    </footer>
-    <script src="script.js"></script>
-  </body>
+  <main>
+    <section id="categories">
+      <div class="category" id="set-1-category">
+        <h3>Book Set 1</h3>
+      </div>
+    </section>
+    <section id="book-sets-1" class="hidden">
+      <h2>Mini Book Texts and Format</h2>
+      <div id="book-content-1" class="book-grid">
+        <!-- Book content for Set 1 -->
+      </div>
+    </section>
+    
+    <section id="categories">
+      <div class="category" id="set-2-category">
+        <h3>Book Set 2</h3>
+      </div>
+    </section>
+    <section id="book-sets-2" class="hidden">
+      <h2>Mini Book Texts and Format</h2>
+      <div id="book-content-2" class="book-grid">
+        <!-- Book content for Set 2 -->
+      </div>
+    </section>
+    
+    <section id="categories">
+      <div class="category" id="set-3-category">
+        <h3>Book Set 3</h3>
+      </div>
+    </section>
+    <section id="book-sets-3" class="hidden">
+      <h2>Mini Book Texts and Format</h2>
+      <div id="book-content-3" class="book-grid">
+        <!-- Book content for Set 3 -->
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2024 P.A.R.T.S</p>
+  </footer>
+  <script src="script.js"></script>
+</body>
 </html>
