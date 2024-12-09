@@ -62,3 +62,20 @@ const booksSet3 = [
 ];
 document.getElementById("set-3-category").addEventListener("click", () => toggleBookSet(3, booksSet3));
 window.open(pdfFile, '_blank', 'width=1200, height=800');
+
+//Contact Us Page
+document.getElementById('contact-form').addEventListener('submit', function (event) {
+  event.preventDefault();
+  const name = document.getElementById('name').value;
+  const email = document.getElementById('email').value;
+  const message = document.getElementById('message').value;
+
+  // Simple form validation
+  if (name && email && message) {
+    document.getElementById('response-message').innerText = 'Thank you for contacting us, ' + name + '!';
+    this.reset();
+  } else {
+    document.getElementById('response-message').innerText = 'Please fill out all fields.';
+  }
+});
+
