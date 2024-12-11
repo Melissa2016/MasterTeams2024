@@ -61,9 +61,32 @@ const booksSet3 = [
   { title: "Book 3B", img: "images/book-3b.jpg", pdf: "book-3b.pdf", ppt: "book-3b.ppt" },
 ];
 document.getElementById("set-3-category").addEventListener("click", () => toggleBookSet(3, booksSet3));
-window.open(pdfFile, '_blank', 'width=1200, height=800');
 
-//Contact Us Page
+const booksSet4 = [
+  { title: "Book 4A", img: "images/book-4a.jpg", pdf: "book-4a.pdf", ppt: "book-4a.ppt" },
+  { title: "Book 4B", img: "images/book-4b.jpg", pdf: "book-4b.pdf", ppt: "book-4b.ppt" },
+];
+document.getElementById("set-4-category").addEventListener("click", () => toggleBookSet(4, booksSet4));
+
+const booksSet5 = [
+  { title: "Book 5A", img: "images/book-5a.jpg", pdf: "book-5a.pdf", ppt: "book-5a.ppt" },
+  { title: "Book 5B", img: "images/book-5b.jpg", pdf: "book-5b.pdf", ppt: "book-5b.ppt" },
+];
+document.getElementById("set-5-category").addEventListener("click", () => toggleBookSet(5, booksSet5));
+
+const booksSet6 = [
+  { title: "Book 6A", img: "images/book-6a.jpg", pdf: "book-6a.pdf", ppt: "book-6a.ppt" },
+  { title: "Book 6B", img: "images/book-6b.jpg", pdf: "book-6b.pdf", ppt: "book-6b.ppt" },
+];
+document.getElementById("set-6-category").addEventListener("click", () => toggleBookSet(6, booksSet6));
+
+const booksSet7 = [
+  { title: "Book 7A", img: "images/book-7a.jpg", pdf: "book-7a.pdf", ppt: "book-7a.ppt" },
+  { title: "Book 7B", img: "images/book-7b.jpg", pdf: "book-7b.pdf", ppt: "book-7b.ppt" },
+];
+document.getElementById("set-7-category").addEventListener("click", () => toggleBookSet(7, booksSet7));
+
+// Contact Us Page
 document.getElementById('contact-form').addEventListener('submit', function (event) {
   event.preventDefault();
   const name = document.getElementById('name').value;
@@ -78,4 +101,3 @@ document.getElementById('contact-form').addEventListener('submit', function (eve
     document.getElementById('response-message').innerText = 'Please fill out all fields.';
   }
 });
-
