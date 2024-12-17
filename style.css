@@ -297,3 +297,10 @@ form button:hover {
   color: #28a745;
   font-weight: bold;
 }
+
+
+.how_to_use {
+  background-color: #f2f4f6; 
+  padding: 40px; 
+  color: #000; 
+}
