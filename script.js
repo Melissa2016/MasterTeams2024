@@ -57,7 +57,7 @@ const booksSet2 = [
 document.getElementById("set-2-category").addEventListener("click", () => toggleBookSet(2, booksSet2));
 
 const booksSet3 = [
-  { title: "Set 3", img: "assets/Sets/Set 3/Cover Image.png", pdf: "assets/Sets/Set 3/Set 3.pdf", ppt: "assets/Sets/Set 3/Set 3.pptx" },
+  { title: "Set 3", img: "assets/Sets/Set3/Cover Image.png", pdf: "assets/Sets/Set3/Set 3.pdf", ppt: "assets/Sets/Set3/Set 3.pptx" },
 
 ];
 document.getElementById("set-3-category").addEventListener("click", () => toggleBookSet(3, booksSet3));
