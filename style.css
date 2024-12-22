@@ -11,7 +11,7 @@ body {
   background-color: #f7f9fc;
   color: #333;
   line-height: 1.6;
-  padding-top: 70px;
+  padding-top: 70px; /* Space for fixed navigation bar */
 }
 
 /* Header Styling */
@@ -28,7 +28,7 @@ header h1 {
   margin: 0;
 }
 
-/* Navigation Bar */
+/* Navigation Styling */
 nav {
   background-color: #dbc4e0;
   position: fixed;
@@ -62,12 +62,20 @@ nav .tabs a:hover {
   color: #1abc9c;
 }
 
+/* Main Content Styling */
+main {
+  padding: 40px 10%;
+  background-color: #d5a6bd;
+}
+
 /* Shop Section Layout */
 .shop-container {
   padding: 50px 10%;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(3, 1fr);
   gap: 30px;
+  justify-content: center;
+  align-items: center;
 }
 
 /* Card Design */
@@ -81,6 +89,9 @@ nav .tabs a:hover {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  width: 350px;
+  height: 400px;
+  margin: auto;
 }
 
 .shop-card:hover {
@@ -90,27 +101,27 @@ nav .tabs a:hover {
 
 .shop-card img {
   width: 100%;
-  height: 200px;
+  height: 120px;
   object-fit: cover;
 }
 
 .shop-card h3 {
   font-size: 1.5rem;
   color: #4a148c;
-  margin: 15px 0 10px;
+  margin: 10px 0 5px;
 }
 
 .shop-card .stars {
   color: #ffd700;
   font-size: 1.2rem;
-  margin-bottom: 10px;
+  margin-bottom: 5px;
 }
 
 .shop-card .price {
   font-size: 1.3rem;
   font-weight: bold;
   color: #333;
-  margin-bottom: 15px;
+  margin-bottom: 10px;
 }
 
 .shop-card .add-to-cart {
@@ -118,8 +129,8 @@ nav .tabs a:hover {
   color: #fff;
   text-transform: uppercase;
   font-size: 1rem;
-  padding: 10px 20px;
-  margin: 15px auto 20px;
+  padding: 6px 14px;
+  margin: 10px auto 15px;
   text-decoration: none;
   border-radius: 5px;
   transition: background-color 0.3s ease;
@@ -129,94 +140,22 @@ nav .tabs a:hover {
   background-color: #5e35b1;
 }
 
-/* Footer Styling */
-footer {
-  background-color: #dbc4e0;
-  color: #674ea7;
-  text-align: center;
-  padding: 20px 0;
-  font-size: 1rem;
+
+
+.size-btn {
+  padding: 8px 15px;
+  margin-right: 10px;
+  background-color: #e4f1e9;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.size-btn:hover {
+  background-color: #bf4ca0;
 }
 
 
-
-
-
-/* General Resets */ 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-/* Body and Font Setup */
-body {
-  font-family: 'Arial', sans-serif;
-  line-height: 1.6;
-  background-color: #f4f4f4;
-  color: #C4E0DB;
-  padding-top: 60px; /* Space for the fixed navigation bar */
-}
-
-/* Header Styling */
-header {
-  background-color: #92C6BC;
-  color: #674ea7;
-  text-align: center;
-  padding: 40px 0;
-}
-
-header h1 {
-  font-size: 3rem;
-  margin-bottom: 10px;
-}
-
-header .vision-statement {
-  font-size: 1.2rem;
-  font-style: italic;
-  max-width: 800px;
-  margin: 0 auto;
-}
-
-/* Navigation Styling */
-nav {
-  background-color: #dbc4e0;
-  position: fixed; /* Fix the navigation bar at the top */
-  top: 0;
-  width: 100%; /* Make the navigation bar span the full width */
-  z-index: 1000; /* Ensure it stays on top of other content */
-  padding: 10px 0;
-}
-
-nav .tabs {
-  list-style-type: none;
-  display: flex;
-  justify-content: center;
-  margin: 0;
-}
-
-nav .tabs li {
-  margin: 0 20px;
-}
-
-nav .tabs a {
-  color: #674ea7;
-  text-decoration: none;
-  font-size: 1.1rem;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  transition: color 0.3s ease;
-}
-
-nav .tabs a:hover {
-  color: #1abc9c;
-}
-
-/* Main Content Styling */
-main {
-  padding: 40px 10%;
-  background-color: #d5a6bd;
-}
 
 /* About Section */
 #about {
@@ -388,13 +327,7 @@ h3 {
   display: none;
 }
 
-body {
-  font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 0;
-  background-color: #f9f9f9;
-}
-
+/* Contact Form Styling */
 .contact-container {
   max-width: 500px;
   margin: 50px auto;
@@ -442,11 +375,13 @@ form button:hover {
   font-weight: bold;
 }
 
-
+/* How to Use Section */
 .how_to_use {
-  background-color: #f2f4f6; 
-  padding: 40px; 
-  color: #000; 
+  background-color: #f2f4f6;
+  padding: 40px;
+  color: #000;
 }
+
+
 
 
