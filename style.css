@@ -1,66 +1,60 @@
-/* General Resets */ 
+/* General Reset */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* Body and Font Setup */
+/* Body Styling */
 body {
   font-family: 'Arial', sans-serif;
+  background-color: #f7f9fc;
+  color: #333;
   line-height: 1.6;
-  background-color: #f4f4f4;
-  color: #C4E0DB;
-  padding-top: 60px; /* Space for the fixed navigation bar */
+  padding-top: 70px; /* Space for fixed navigation bar */
 }
 
 /* Header Styling */
 header {
-  background-color: #92C6BC;
-  color: #674ea7;
+  background-color: #92c6bc;
+  color: #4a148c;
   text-align: center;
-  padding: 40px 0;
+  padding: 20px 0;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 header h1 {
-  font-size: 3rem;
-  margin-bottom: 10px;
-}
-
-header .vision-statement {
-  font-size: 1.2rem;
-  font-style: italic;
-  max-width: 800px;
-  margin: 0 auto;
+  font-size: 2.5rem;
+  margin: 0;
 }
 
 /* Navigation Styling */
 nav {
   background-color: #dbc4e0;
-  position: fixed; /* Fix the navigation bar at the top */
+  position: fixed;
   top: 0;
-  width: 100%; /* Make the navigation bar span the full width */
-  z-index: 1000; /* Ensure it stays on top of other content */
+  width: 100%;
+  z-index: 1000;
   padding: 10px 0;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 nav .tabs {
-  list-style-type: none;
+  list-style: none;
   display: flex;
   justify-content: center;
-  margin: 0;
 }
 
 nav .tabs li {
-  margin: 0 20px;
+  margin: 0 15px;
 }
 
 nav .tabs a {
-  color: #674ea7;
   text-decoration: none;
-  font-size: 1.1rem;
+  color: #674ea7;
+  font-size: 1.2rem;
+  font-weight: bold;
   text-transform: uppercase;
-  letter-spacing: 1px;
   transition: color 0.3s ease;
 }
 
@@ -73,6 +67,95 @@ main {
   padding: 40px 10%;
   background-color: #d5a6bd;
 }
+
+/* Shop Section Layout */
+.shop-container {
+  padding: 50px 10%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Card Design */
+.shop-card {
+  background-color: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 350px;
+  height: 400px;
+  margin: auto;
+}
+
+.shop-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.2);
+}
+
+.shop-card img {
+  width: 100%;
+  height: 120px;
+  object-fit: cover;
+}
+
+.shop-card h3 {
+  font-size: 1.5rem;
+  color: #4a148c;
+  margin: 10px 0 5px;
+}
+
+.shop-card .stars {
+  color: #ffd700;
+  font-size: 1.2rem;
+  margin-bottom: 5px;
+}
+
+.shop-card .price {
+  font-size: 1.3rem;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.shop-card .add-to-cart {
+  background-color: #673ab7;
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 1rem;
+  padding: 6px 14px;
+  margin: 10px auto 15px;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.shop-card .add-to-cart:hover {
+  background-color: #5e35b1;
+}
+
+
+
+.size-btn {
+  padding: 8px 15px;
+  margin-right: 10px;
+  background-color: #e4f1e9;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.size-btn:hover {
+  background-color: #bf4ca0;
+}
+
+
 
 /* About Section */
 #about {
@@ -244,13 +327,7 @@ h3 {
   display: none;
 }
 
-body {
-  font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 0;
-  background-color: #f9f9f9;
-}
-
+/* Contact Form Styling */
 .contact-container {
   max-width: 500px;
   margin: 50px auto;
@@ -298,9 +375,13 @@ form button:hover {
   font-weight: bold;
 }
 
-
+/* How to Use Section */
 .how_to_use {
-  background-color: #f2f4f6; 
-  padding: 40px; 
-  color: #000; 
+  background-color: #f2f4f6;
+  padding: 40px;
+  color: #000;
 }
+
+
+
+

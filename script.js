@@ -51,7 +51,7 @@
   document.getElementById("set-1-category").addEventListener("click", () => toggleBookSet(1, booksSet1));
 
   const booksSet2 = [
-    { title: "Set 2", img: "assets/Sets/Set2/cover-image set2.jpeg", pdf: "assets/Sets/Set2/Set 2.pdf", ppt: "assets/Sets/Set2/Set 2.pptx" },
+    { title: "Set 2", img: "assets/Sets/Set2/cover-image set2.png", pdf: "assets/Sets/Set2/Set 2.pdf", ppt: "assets/Sets/Set2/Set 2.pptx" },
   ];
   document.getElementById("set-2-category").addEventListener("click", () => toggleBookSet(2, booksSet2));
 
@@ -95,6 +95,12 @@
       document.getElementById('response-message').innerText = 'Please fill out all fields.';
     }
   });
+
+
+
+
+
+
 
 
 

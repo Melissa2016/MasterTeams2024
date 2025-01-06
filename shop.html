@@ -4,157 +4,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Shop - P.A.R.T.S</title>
-    <style>
-        /* General Reset */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        /* Body Styling */
-        body {
-            font-family: 'Arial', sans-serif;
-            background-color: #f7f9fc;
-            color: #333;
-            line-height: 1.6;
-            padding-top: 70px;
-        }
-
-        /* Header Styling */
-        header {
-            background-color: #92c6bc;
-            color: #4a148c;
-            text-align: center;
-            padding: 20px 0;
-            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-        }
-
-        header h1 {
-            font-size: 2.5rem;
-            margin: 0;
-        }
-
-        /* Navigation Bar */
-        nav {
-            background-color: #dbc4e0;
-            position: fixed;
-            top: 0;
-            width: 100%;
-            z-index: 1000;
-            padding: 10px 0;
-            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-        }
-
-        nav .tabs {
-            list-style: none;
-            display: flex;
-            justify-content: center;
-        }
-
-        nav .tabs li {
-            margin: 0 15px;
-        }
-
-        nav .tabs a {
-            text-decoration: none;
-            color: #674ea7;
-            font-size: 1.2rem;
-            font-weight: bold;
-            text-transform: uppercase;
-            transition: color 0.3s ease;
-        }
-
-        nav .tabs a:hover {
-            color: #1abc9c;
-        }
-
-        /* Shop Section Layout */
-        .shop-container {
-            padding: 50px 10%;
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
-        }
-
-        /* Card Design */
-        .shop-card {
-            background-color: #fff;
-            border-radius: 12px;
-            overflow: hidden;
-            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-            text-align: center;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-        }
-
-        .shop-card:hover {
-            transform: translateY(-8px);
-            box-shadow: 0 12px 25px rgba(0, 0, 0, 0.2);
-        }
-
-        .shop-card img {
-            width: 100%;
-            height: 200px;
-            object-fit: cover;
-        }
-
-        .shop-card h3 {
-            font-size: 1.5rem;
-            color: #4a148c;
-            margin: 15px 0 10px;
-        }
-
-        .shop-card .stars {
-            color: #ffd700;
-            font-size: 1.2rem;
-            margin-bottom: 10px;
-        }
-
-        .shop-card .price {
-            font-size: 1.3rem;
-            font-weight: bold;
-            color: #333;
-            margin-bottom: 15px;
-        }
-
-        .shop-card .add-to-cart {
-            background-color: #673ab7;
-            color: #fff;
-            text-transform: uppercase;
-            font-size: 1rem;
-            padding: 10px 20px;
-            margin: 15px auto 20px;
-            text-decoration: none;
-            border-radius: 5px;
-            transition: background-color 0.3s ease;
-        }
-
-        .shop-card .add-to-cart:hover {
-            background-color: #5e35b1;
-        }
-
-        /* Footer Styling */
-        footer {
-            background-color: #dbc4e0;
-            color: #674ea7;
-            text-align: center;
-            padding: 20px 0;
-            font-size: 1rem;
-        }
-    </style>
+    <link rel="stylesheet" href="style.css" />
 </head>
 <body>
     <header>
-        <h1>Shop</h1>
+        <h1 style="font-family: Arial, sans-serif; font-size: 36px; color: #333; text-align: center; padding: 20px;">
+            Shop <span style="font-style: italic;">with Us</span>
+          </h1>
+          
     </header>
 
     <nav>
         <ul class="tabs">
             <li><a href="index.html">Home</a></li>
             <li><a href="how-to-use.html">How to Use</a></li>
+            <li><a href="shop.html">Shop</a></li>
             <li><a href="contact-us.html">Contact Us</a></li>
             <li><a href="about.html">About the Creators</a></li>
         </ul>
@@ -164,64 +28,124 @@
         <div class="shop-container">
             <!-- Card 1 -->
             <div class="shop-card">
-                <img src="assets/Shop/image1.jpeg" alt="Book 1">
-                <h3>The Heroes of Summer By Norris Mcdonald</h3>
-                <span style="font-size: 0.9rem; color: #888;">Books Sold: 120</span>
-                <div class="stars">★★★★★</div>
+                <img src="assets/Shop/image1.jpg" alt="Book 1">
+                <h3>Pets in Set 1</h3>
+                <span style="font-size: 0.9rem; color: #888;">Items Sold: 120</span>
                 <div class="price">$15.99</div>
+                <div class="size-options">
+                    <button class="size-btn">Small</button>
+                    <button class="size-btn">Medium</button>
+                    <button class="size-btn">Large</button>
+                </div>
                 <a href="#" class="add-to-cart">Add to Cart</a>
             </div>
 
             <!-- Card 2 -->
             <div class="shop-card">
                 <img src="assets/Shop/image2.jpg" alt="Book 2">
-                <h3>Best Friends By Yara Helmy</h3>
-                <span style="font-size: 0.9rem; color: #888;">Books Sold: 30</span>
-                <div class="stars">★★★★★</div>
+                <h3>Cats in Set 1</h3>
+                <span style="font-size: 0.9rem; color: #888;">Items Sold: 30</span>
                 <div class="price">$12.99</div>
+                <div class="size-options">
+                    <button class="size-btn">Small</button>
+                    <button class="size-btn">Medium</button>
+                    <button class="size-btn">Large</button>
+                </div>
                 <a href="#" class="add-to-cart">Add to Cart</a>
             </div>
 
             <!-- Card 3 -->
             <div class="shop-card">
                 <img src="assets/Shop/image3.jpg" alt="Book 3">
-                <h3>Once Upon A Time By Marthina Smith</h3>
-                <span style="font-size: 0.9rem; color: #888;">Books Sold: 100</span>
-                <div class="stars">★★★★☆</div>
+                <h3>Mats in Set 2</h3>
+                <span style="font-size: 0.9rem; color: #888;">Items Sold: 100</span>
                 <div class="price">$10.99</div>
+                <div class="size-options">
+                    <button class="size-btn">Small</button>
+                    <button class="size-btn">Medium</button>
+                    <button class="size-btn">Large</button>
+                </div>
                 <a href="#" class="add-to-cart">Add to Cart</a>
             </div>
 
             <!-- Card 4 -->
             <div class="shop-card">
-                <img src="assets/Shop/image4.png" alt="Book 4">
-                <h3>Kindling Wood By Hal Blakeslee</h3>
-                <span style="font-size: 0.9rem; color: #888;">Books Sold: 200</span>
-                <div class="stars">★★★★☆</div>
+                <img src="assets/Shop/image4.jpg" alt="Book 4">
+                <h3>Cups in Set 2</h3>
+                <span style="font-size: 0.9rem; color: #888;">Items Sold: 200</span>
                 <div class="price">$9.99</div>
+                <div class="size-options">
+                    <button class="size-btn">Small</button>
+                    <button class="size-btn">Medium</button>
+                    <button class="size-btn">Large</button>
+                </div>
                 <a href="#" class="add-to-cart">Add to Cart</a>
             </div>
 
             <!-- Card 5 -->
             <div class="shop-card">
-                <img src="assets/Shop/image5.jpeg" alt="Book 5">
-                <h3>Princess The Cat Versus Snarl The Coyote By John Heaton</h3>
-                <span style="font-size: 0.9rem; color: #888;">Books Sold: 400</span>
-                <div class="stars">★★★★★</div>
+                <img src="assets/Shop/image5.jpg" alt="Book 5">
+                <h3>Vans in Set 2</h3>
+                <span style="font-size: 0.9rem; color: #888;">Items Sold: 400</span>
                 <div class="price">$14.99</div>
+                <div class="size-options">
+                    <button class="size-btn">Small</button>
+                    <button class="size-btn">Medium</button>
+                    <button class="size-btn">Large</button>
+                </div>
                 <a href="#" class="add-to-cart">Add to Cart</a>
             </div>
 
             <!-- Card 6 -->
             <div class="shop-card">
                 <img src="assets/Shop/image6.jpg" alt="Book 6">
-                <h3>The Adventure of Grizllie by Andrew Wilson</h3>
-                <span style="font-size: 0.9rem; color: #888;">Books Sold: 70</span>
-                <div class="stars">★★★★★</div>
+                <h3>Buses in Set 2</h3>
+                <span style="font-size: 0.9rem; color: #888;">Items Sold: 70</span>
                 <div class="price">$18.99</div>
+                <div class="size-options">
+                    <button class="size-btn">Small</button>
+                    <button class="size-btn">Medium</button>
+                    <button class="size-btn">Large</button>
+                </div>
                 <a href="#" class="add-to-cart">Add to Cart</a>
             </div>
         </div>
+         <!-- Featured Products Section -->
+         <section class="featured-products">
+            <h2 style="text-align: center; padding: 20px; font-size: 28px; font-family: 'Arial', sans-serif; color: #FF6347;">
+                Best <span style="font-family: 'Courier New', monospace; color: #4682B4;">Deals</span> of the <span style="color: #32CD32;">Season</span>
+              </h2>
+              
+            <div class="shop-container">
+                <!-- Featured Card 1 -->
+                <div class="shop-card">
+                    <img src="assets/Shop/image7.jpg" alt="Featured Book 1">
+                    <h3>Pigs in Set 3 </h3>
+                    <span style="font-size: 0.9rem; color: #888;">Items Sold: 700</span>
+                    <div class="price">$20.99</div>
+                    <div class="size-options">
+                        <button class="size-btn">Small</button>
+                        <button class="size-btn">Medium</button>
+                        <button class="size-btn">Large</button>
+                    </div>
+                    <a href="#" class="add-to-cart">Add to Cart</a>
+                </div>
+
+                <!-- Featured Card 2 -->
+                <div class="shop-card">
+                    <img src="assets/Shop/image8.jpg" alt="Featured Book 2">
+                    <h3>Hens in Set 3</h3>
+                    <span style="font-size: 0.9rem; color: #888;">Items Sold: 289</span>
+                    <div class="price">$17.99</div>
+                    <div class="size-options">
+                        <button class="size-btn">Small</button>
+                        <button class="size-btn">Medium</button>
+                        <button class="size-btn">Large</button>
+                    </div>
+                    <a href="#" class="add-to-cart">Add to Cart</a>
+                </div>
+            </div>
+        </section>
     </main>
 
     <footer>
@@ -229,3 +153,8 @@
     </footer>
 </body>
 </html>
+
+
+
+
+
