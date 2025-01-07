@@ -449,4 +449,10 @@ form button:hover {
   text-decoration: underline;
 }
 
-
+/* Flashcards Container (Updated for More Resources) */
+.flashcards-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* Adjusting to display 4 columns */
+  gap: 20px;
+  padding: 20px;
+}
