@@ -28,16 +28,32 @@
     We’d love to hear from you! Submit your inquiries or feedback through our form, and our team will respond within 24 hours.
 </p>
 
-              <h1>Contact Us</h1>
-              <form id="contact-form">
-                <label for="name">Name:</label>
-                <input type="text" id="name" name="name" placeholder="Your Name" required>
-                
-                <label for="email">Email:</label>
-                
-                    <input type="email" id="email" name="email" placeholder="Your Email" required
-                pattern="[a-zA-Z.]+@[a-zA-Z]+\.[a-zA-Z]+">
-                Use Letters and special Characters only
+<h1>Contact Us</h1>
+<form id="contact-form">
+  <label for="name">Name:</label>
+  <input 
+    type="text" 
+    id="name" 
+    name="name" 
+    placeholder="Your Name" 
+    required
+    oninput="validateName()"
+  >
+  <small id="name-error" style="color: red; display: none;">
+    Please enter letters only. No numbers or special characters are allowed.
+  </small>                
+  <label for="email">Email:</label>
+  <input 
+    type="email" 
+    id="email" 
+    name="email" 
+    placeholder="Your Email" 
+    required
+    oninput="validateEmail()"
+  >
+  <small id="email-error" style="color: red; display: none;">
+    Please enter a valid email. Only letters and special characters are allowed (no numbers).
+  </small>
                 <label for="message">Message:</label>
                 <textarea id="message" name="message" placeholder="Your Message" rows="5" required></textarea>
                 
@@ -46,6 +62,30 @@
               <p id="response-message"></p>
             </div>
             <script src="script.js"></script>
+            <script>
+              function validateName() {
+                const nameInput = document.getElementById('name');
+                const errorMessage = document.getElementById('name-error');
+                const regex = /^[A-Za-z\s]+$/;
+            
+                if (nameInput.value && !regex.test(nameInput.value)) {
+                  errorMessage.style.display = 'inline';
+                } else {
+                  errorMessage.style.display = 'none';
+                }
+              }
+              function validateEmail() {
+    const emailInput = document.getElementById('email');
+    const errorMessage = document.getElementById('email-error');
+    const regex = /^[a-zA-Z.]+@[a-zA-Z]+\.[a-zA-Z]+$/;
+
+    if (emailInput.value && !regex.test(emailInput.value)) {
+      errorMessage.style.display = 'inline';
+    } else {
+      errorMessage.style.display = 'none';
+    }
+  }
+            </script>    
     </main>
     
     <footer>
