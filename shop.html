@@ -4,16 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Shop - P.A.R.T.S</title>
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header>
-        <h1 style="font-family: Arial, sans-serif; font-size: 36px; color: #333; text-align: center; padding: 20px;">
-            Shop <span style="font-style: italic;">with Us</span>
-          </h1>
-          
+        <h1>Shop <span>with Us</span></h1>
     </header>
-
     <nav>
         <ul class="tabs">
             <li><a href="index.html">Home</a></li>
@@ -22,95 +18,98 @@
             <li><a href="contact-us.html">Contact Us</a></li>
             <li><a href="about.html">About the Creators</a></li>
             <li><a href="resources.html">Resources</a></li> <!-- New Resources Tab -->
+            <div class="cart-icon">
+                <a href="cart.html">🛒 <span id="cart-count">0</span></a>
+            </div>
         </ul>
     </nav>
-
     <main>
         <div class="shop-container">
             <!-- Card 1 -->
             <div class="shop-card">
-                <img src="assets/Shop/image1.jpg" alt="Book 1">
+                <img src="assets/Shop/image1.jpg" alt="Pets in Set 1">
                 <h3>Pets in Set 1</h3>
                 <span style="font-size: 0.9rem; color: #888;">Items Sold: 120</span>
-                <div class="price">$15.99</div>
+                <div class="price" data-price="15.99">$15.99</div>
                 <div class="size-options">
                     <button class="size-btn">Small</button>
                     <button class="size-btn">Medium</button>
                     <button class="size-btn">Large</button>
                 </div>
-                <a href="#" class="add-to-cart">Add to Cart</a>
+                <button class="add-to-cart" data-name="Pets in Set 1" data-price="15.99">Add to Cart</button>
             </div>
-
+            
             <!-- Card 2 -->
             <div class="shop-card">
-                <img src="assets/Shop/image2.jpg" alt="Book 2">
+                <img src="assets/Shop/image2.jpg" alt="Cats in Set 1">
                 <h3>Cats in Set 1</h3>
                 <span style="font-size: 0.9rem; color: #888;">Items Sold: 30</span>
-                <div class="price">$12.99</div>
+                <div class="price" data-price="44.99">$44.99</div>
                 <div class="size-options">
                     <button class="size-btn">Small</button>
                     <button class="size-btn">Medium</button>
                     <button class="size-btn">Large</button>
                 </div>
-                <a href="#" class="add-to-cart">Add to Cart</a>
+                <button class="add-to-cart" data-name="Cats in Set 1" data-price="44.99">Add to Cart</button>
             </div>
 
             <!-- Card 3 -->
             <div class="shop-card">
-                <img src="assets/Shop/image3.jpg" alt="Book 3">
+                <img src="assets/Shop/image3.jpg" alt="Mats in Set 2">
                 <h3>Mats in Set 2</h3>
                 <span style="font-size: 0.9rem; color: #888;">Items Sold: 100</span>
-                <div class="price">$10.99</div>
+                <div class="price" data-price="14.99">$14.99</div>
                 <div class="size-options">
                     <button class="size-btn">Small</button>
                     <button class="size-btn">Medium</button>
                     <button class="size-btn">Large</button>
                 </div>
-                <a href="#" class="add-to-cart">Add to Cart</a>
+                <button class="add-to-cart" data-name="Mats in Set 2" data-price="14.99">Add to Cart</button>
             </div>
 
             <!-- Card 4 -->
             <div class="shop-card">
-                <img src="assets/Shop/image4.jpg" alt="Book 4">
+                <img src="assets/Shop/image4.jpg" alt="Cups in Set 2">
                 <h3>Cups in Set 2</h3>
                 <span style="font-size: 0.9rem; color: #888;">Items Sold: 200</span>
-                <div class="price">$9.99</div>
+                <div class="price" data-price="19.99">$19.99</div>
                 <div class="size-options">
                     <button class="size-btn">Small</button>
                     <button class="size-btn">Medium</button>
                     <button class="size-btn">Large</button>
                 </div>
-                <a href="#" class="add-to-cart">Add to Cart</a>
+                <button class="add-to-cart" data-name="Cups in Set 2" data-price="19.99">Add to Cart</button>
             </div>
 
             <!-- Card 5 -->
             <div class="shop-card">
-                <img src="assets/Shop/image5.jpg" alt="Book 5">
+                <img src="assets/Shop/image5.jpg" alt="Vans in Set 2">
                 <h3>Vans in Set 2</h3>
                 <span style="font-size: 0.9rem; color: #888;">Items Sold: 400</span>
-                <div class="price">$14.99</div>
+                <div class="price" data-price="29.99">$29.99</div>
                 <div class="size-options">
                     <button class="size-btn">Small</button>
                     <button class="size-btn">Medium</button>
                     <button class="size-btn">Large</button>
                 </div>
-                <a href="#" class="add-to-cart">Add to Cart</a>
+                <button class="add-to-cart" data-name="Vans in Set 2" data-price="29.99">Add to Cart</button>
             </div>
 
             <!-- Card 6 -->
             <div class="shop-card">
-                <img src="assets/Shop/image6.jpg" alt="Book 6">
+                <img src="assets/Shop/image6.jpg" alt="Buses in Set 2">
                 <h3>Buses in Set 2</h3>
                 <span style="font-size: 0.9rem; color: #888;">Items Sold: 70</span>
-                <div class="price">$18.99</div>
+                <div class="price" data-price="25.99">$25.99</div>
                 <div class="size-options">
                     <button class="size-btn">Small</button>
                     <button class="size-btn">Medium</button>
                     <button class="size-btn">Large</button>
                 </div>
-                <a href="#" class="add-to-cart">Add to Cart</a>
+                <button class="add-to-cart" data-name="Buses in Set 2" data-price="25.99">Add to Cart</button>
             </div>
         </div>
+
          <!-- Featured Products Section -->
          <section class="featured-products">
             <h2 style="text-align: center; padding: 20px; font-size: 28px; font-family: 'Arial', sans-serif; color: #FF6347;">
@@ -120,40 +119,43 @@
             <div class="shop-container">
                 <!-- Featured Card 1 -->
                 <div class="shop-card">
-                    <img src="assets/Shop/image7.jpg" alt="Featured Book 1">
-                    <h3>Pigs in Set 3 </h3>
+                    <img src="assets/Shop/image7.jpg" alt="Pigs in Set 3">
+                    <h3>Pigs in Set 3</h3>
                     <span style="font-size: 0.9rem; color: #888;">Items Sold: 700</span>
-                    <div class="price">$20.99</div>
+                    <div class="price" data-price="20.99">$20.99</div>
                     <div class="size-options">
                         <button class="size-btn">Small</button>
                         <button class="size-btn">Medium</button>
                         <button class="size-btn">Large</button>
                     </div>
-                    <a href="#" class="add-to-cart">Add to Cart</a>
+                    <button class="add-to-cart" data-name="Pigs in Set 3" data-price="20.99">Add to Cart</button>
                 </div>
 
                 <!-- Featured Card 2 -->
                 <div class="shop-card">
-                    <img src="assets/Shop/image8.jpg" alt="Featured Book 2">
+                    <img src="assets/Shop/image8.jpg" alt="Hens in Set 3">
                     <h3>Hens in Set 3</h3>
                     <span style="font-size: 0.9rem; color: #888;">Items Sold: 289</span>
-                    <div class="price">$17.99</div>
+                    <div class="price" data-price="17.99">$17.99</div>
                     <div class="size-options">
                         <button class="size-btn">Small</button>
                         <button class="size-btn">Medium</button>
                         <button class="size-btn">Large</button>
                     </div>
-                    <a href="#" class="add-to-cart">Add to Cart</a>
+                    <button class="add-to-cart" data-name="Hens in Set 3" data-price="17.99">Add to Cart</button>
                 </div>
             </div>
         </section>
+        
     </main>
-
+    <script src="script.js"></script>
     <footer>
         <p>© 2024 P.A.R.T.S</p>
     </footer>
 </body>
 </html>
+
+
 
 
 
