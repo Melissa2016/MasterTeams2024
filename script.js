@@ -218,7 +218,7 @@ document.addEventListener("DOMContentLoaded", () => {
   document.getElementById("set-3-category").addEventListener("click", () => toggleBookSet(3, booksSet3));
 
   const booksSet4 = [
-    { title: "Set 4", img: "images/book-4a.jpg", pdf: "book-4a.pdf", ppt: "book-4a.ppt" },
+    { title: "Set 4", img: "assets/Sets/Set4/Cover Image.png", pdf: "assets/Sets/Set4/Set 4.pdf", ppt: "assets/Sets/Set4/Set 4.pptx" },
   ];
   document.getElementById("set-4-category").addEventListener("click", () => toggleBookSet(4, booksSet4));
 
