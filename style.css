@@ -29,6 +29,7 @@ header h1 {
 }
 
 /* Navigation Styling */
+/* Nav bar styling to ensure the layout works well */
 nav {
   background-color: #dbc4e0;
   position: fixed;
@@ -37,12 +38,16 @@ nav {
   z-index: 1000;
   padding: 10px 0;
   box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  display: flex; /* Use flexbox for better alignment */
+  justify-content: center; /* Center the navbar links */
 }
 
 nav .tabs {
   list-style: none;
   display: flex;
   justify-content: center;
+  margin: 0;
+  padding: 0;
 }
 
 nav .tabs li {
@@ -61,6 +66,152 @@ nav .tabs a {
 nav .tabs a:hover {
   color: #1abc9c;
 }
+
+
+
+/* Ensure the cart icon matches your color scheme */
+.cart-icon {
+  position: absolute; /* Absolute position relative to the nav bar */
+  top: 10px; /* Position it near the top of the page */
+  right: 20px; /* Position it on the far right side */
+  font-size: 24px;
+  color: #4a148c; /* Purple color for the icon */
+}
+
+.cart-icon a {
+  text-decoration: none;
+  color: #4a148c; /* Purple color for the cart text */
+  font-weight: bold;
+}
+
+/* Position the cart-count on top of the basket icon */
+.cart-icon span {
+  position: absolute; /* Position it absolutely within the cart icon */
+  top: -8px;  /* Move the count slightly above the icon */
+  right: -8px; /* Move the count slightly to the right */
+  font-size: 16px;
+  background-color: #31dbb9; /* Light teal background for the count bubble */
+  color: #fff; /* White text for the count */
+  padding: 3px 8px;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+/* Hover effect for the cart icon */
+.cart-icon a:hover {
+  color: #1abc9c; /* Teal color for hover effect */
+}
+
+.cart-icon span:hover {
+  background-color: #4a148c; /* Change background to purple when hovering over the count bubble */
+}
+
+
+
+
+/* Cart and Checkout Styling */
+.cart-container, .checkout-container {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.cart-container h2, .checkout-container h2 {
+  font-size: 2rem;
+  color: #4a148c;
+}
+
+.cart-summary, .checkout-summary {
+  margin-top: 20px;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+button {
+  background-color: #673ab7;
+  color: white;
+  font-size: 1.1rem;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 20px;
+}
+
+button:hover {
+  background-color: #5e35b1;
+}
+
+button:focus {
+  outline: none;
+}
+
+form input, form textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+form button {
+  width: 100%;
+  padding: 10px;
+  background-color: #28a745;
+  color: #fff;
+  border: none;
+  font-size: 1.2rem;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+form button:hover {
+  background-color: #218838;
+}
+
+/* Cart Item Design */
+.cart-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 0;
+  border-bottom: 1px solid #ddd;
+}
+
+.cart-item img {
+  width: 60px;
+  height: 60px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.cart-item h4 {
+  font-size: 1.2rem;
+  color: #4a148c;
+}
+
+.cart-item .price {
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: #333;
+}
+
+.cart-item .remove-btn {
+  background-color: #ff5722;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  font-size: 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.cart-item .remove-btn:hover {
+  background-color: #d84b16;
+}
+
+
+
 
 /* Main Content Styling */
 main {
@@ -145,7 +296,7 @@ main {
 .size-btn {
   padding: 8px 15px;
   margin-right: 10px;
-  background-color: #e4f1e9;
+  background-color: #549f71;
   border: none;
   border-radius: 5px;
   cursor: pointer;
@@ -225,6 +376,8 @@ footer {
   padding: 20px 0;
   font-size: 1rem;
 }
+
+
 
 /* Book Set Section */
 #book-sets {
@@ -382,6 +535,96 @@ form button:hover {
   color: #000;
 }
 
+
+
+/* Responsiveness for Mobile Devices */
+@media (max-width: 768px) {
+  /* Adjust main padding for mobile */
+  main {
+    padding: 20px 5%;
+  }
+
+  /* Stack the cart items vertically */
+  .cart-item {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .cart-item img {
+    margin-bottom: 10px;
+  }
+
+  button {
+    width: 100%;
+  }
+
+  /* Make the shop cards responsive */
+  .shop-container {
+    padding: 20px;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
+  }
+
+  .shop-card {
+    width: 100%;
+    height: auto;
+  }
+
+  /* Adjust header and nav font size for small screens */
+  header h1 {
+    font-size: 1.8rem;
+  }
+
+  nav .tabs a {
+    font-size: 1rem;
+  }
+
+  /* Adjust for cart icon and navigation */
+  .cart-icon {
+    right: 10px;
+    top: 5px;
+    font-size: 22px;
+  }
+
+  .cart-icon span {
+    top: -5px;
+    right: -5px;
+  }
+}
+
+/* Larger Mobile Responsiveness */
+@media (max-width: 480px) {
+  /* Stack creators section vertically */
+  .creators {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .creator {
+    width: 90%;
+    margin: 10px 0;
+  }
+
+  /* Reduce padding and margins for smaller screens */
+  .shop-container {
+    padding: 10px;
+  }
+
+  .shop-card {
+    width: 100%;
+  }
+
+  .size-btn {
+    padding: 6px 12px;
+  }
+
+  .shop-card .price {
+    font-size: 1.1rem;
+  }
+}
+
+
+
 /* Resources Page Styling */
 
 /* Flashcards Container */
@@ -456,3 +699,4 @@ form button:hover {
   gap: 20px;
   padding: 20px;
 }
+
