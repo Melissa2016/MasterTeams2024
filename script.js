@@ -243,6 +243,28 @@ document.addEventListener("DOMContentLoaded", () => {
     const name = document.getElementById('name').value;
     const email = document.getElementById('email').value;
     const message = document.getElementById('message').value;
+    function validateName() {
+      const nameInput = document.getElementById('name');
+      const errorMessage = document.getElementById('name-error');
+      const regex = /^[A-Za-z\s]+$/;
+  
+      if (nameInput.value && !regex.test(nameInput.value)) {
+        errorMessage.style.display = 'inline';
+      } else {
+        errorMessage.style.display = 'none';
+      }
+    }
+    function validateEmail() {
+const emailInput = document.getElementById('email');
+const errorMessage = document.getElementById('email-error');
+const regex = /^[a-zA-Z.]+@[a-zA-Z]+\.[a-zA-Z]+$/;
+
+if (emailInput.value && !regex.test(emailInput.value)) {
+errorMessage.style.display = 'inline';
+} else {
+errorMessage.style.display = 'none';
+}
+}
 
     // Simple form validation
     if (name && email && message) {

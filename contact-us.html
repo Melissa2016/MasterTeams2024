@@ -73,30 +73,7 @@
               <p id="response-message"></p>
             </div>
             <script src="script.js"></script>
-            <script>
-              function validateName() {
-                const nameInput = document.getElementById('name');
-                const errorMessage = document.getElementById('name-error');
-                const regex = /^[A-Za-z\s]+$/;
             
-                if (nameInput.value && !regex.test(nameInput.value)) {
-                  errorMessage.style.display = 'inline';
-                } else {
-                  errorMessage.style.display = 'none';
-                }
-              }
-              function validateEmail() {
-    const emailInput = document.getElementById('email');
-    const errorMessage = document.getElementById('email-error');
-    const regex = /^[a-zA-Z.]+@[a-zA-Z]+\.[a-zA-Z]+$/;
-
-    if (emailInput.value && !regex.test(emailInput.value)) {
-      errorMessage.style.display = 'inline';
-    } else {
-      errorMessage.style.display = 'none';
-    }
-  }
-            </script>    
     </main>
     
     <footer>
