@@ -223,7 +223,7 @@ document.addEventListener("DOMContentLoaded", () => {
   document.getElementById("set-4-category").addEventListener("click", () => toggleBookSet(4, booksSet4));
 
   const booksSet5 = [
-    { title: "Set 5", img: "images/book-5a.jpg", pdf: "book-5a.pdf", ppt: "book-5a.ppt" },
+    { title: "Set 5", img: "assets/Sets/Set5/Cover Image.png", pdf: "assets/Sets/Set5/Set 5.pdf", ppt: "assets/Sets/Set5/Set 5.pptx" },
   ];
   document.getElementById("set-5-category").addEventListener("click", () => toggleBookSet(5, booksSet5));
 
