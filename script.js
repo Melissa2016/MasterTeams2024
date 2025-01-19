@@ -237,44 +237,52 @@ document.addEventListener("DOMContentLoaded", () => {
   ];
   document.getElementById("set-7-category").addEventListener("click", () => toggleBookSet(7, booksSet7));
 
-  // Contact Us Page
-  document.getElementById('contact-form').addEventListener('submit', function (event) {
-    event.preventDefault();
-    const name = document.getElementById('name').value;
-    const email = document.getElementById('email').value;
-    const message = document.getElementById('message').value;
-    function validateName() {
-      const nameInput = document.getElementById('name');
-      const errorMessage = document.getElementById('name-error');
-      const regex = /^[A-Za-z\s]+$/;
-  
-      if (nameInput.value && !regex.test(nameInput.value)) {
-        errorMessage.style.display = 'inline';
+ 
+// Form Validation for Name
+function validateName() {
+  const nameInput = document.getElementById('name');
+  const errorMessage = document.getElementById('name-error');
+  const regex = /^[A-Za-z\s]+$/;
+
+  if (nameInput.value && !regex.test(nameInput.value)) {
+      errorMessage.style.display = 'inline';
+  } else {
+      errorMessage.style.display = 'none';
+  }
+}
+
+// Form Validation for Email
+function validateEmail() {
+  const emailInput = document.getElementById('email');
+  const errorMessage = document.getElementById('email-error');
+  const regex = /^[a-zA-Z.]+@[a-zA-Z]+\.[a-zA-Z]+$/;
+
+  if (emailInput.value && !regex.test(emailInput.value)) {
+      errorMessage.style.display = 'inline';
+  } else {
+      errorMessage.style.display = 'none';
+  }
+}
+
+// Contact Form Submission Handling
+document.addEventListener('DOMContentLoaded', function () {
+  const contactForm = document.getElementById('contact-form');
+
+  contactForm.addEventListener('submit', function (event) {
+      event.preventDefault();
+
+      const name = document.getElementById('name').value;
+      const email = document.getElementById('email').value;
+      const message = document.getElementById('message').value;
+
+      // Check if all fields are filled
+      if (name && email && message) {
+          document.getElementById('response-message').innerText =
+              `Thank you for contacting us, ${name}! We’ll get back to you soon.`;
+          contactForm.reset(); // Reset the form
       } else {
-        errorMessage.style.display = 'none';
+          document.getElementById('response-message').innerText =
+              'Please fill out all fields.';
       }
-    }
-    function validateEmail() {
-const emailInput = document.getElementById('email');
-const errorMessage = document.getElementById('email-error');
-const regex = /^[a-zA-Z.]+@[a-zA-Z]+\.[a-zA-Z]+$/;
-
-if (emailInput.value && !regex.test(emailInput.value)) {
-errorMessage.style.display = 'inline';
-} else {
-errorMessage.style.display = 'none';
-}
-}
-
-    // Simple form validation
-    if (name && email && message) {
-      document.getElementById('response-message').innerText = 'Thank you for contacting us, ' + name + '!';
-      this.reset();
-    } else {
-      document.getElementById('response-message').innerText = 'Please fill out all fields.';
-    }
   });
-
-
-
-
+});
