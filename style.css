@@ -700,3 +700,23 @@ form button:hover {
   padding: 20px;
 }
 
+
+
+#continue-shopping {
+  position: fixed; /* Ensures the button stays in the same place even when scrolling */
+  top: 10px;       /* Distance from the top of the page */
+  left: 10px;      /* Distance from the left side of the page */
+  background-color: #45b39d; /* Button background color */
+  color: white;    /* Text color */
+  border: none;    /* Remove border */
+  padding: 10px 20px; /* Padding for button size */
+  border-radius: 5px; /* Rounded corners */
+  cursor: pointer; /* Pointer cursor on hover */
+  font-size: 16px; /* Font size */
+  z-index: 1000;   /* Ensures it stays above other elements */
+}
+
+/* Hover effect */
+#continue-shopping:hover {
+  background-color: #2ecc71; /* Slightly brighter background on hover */
+}
