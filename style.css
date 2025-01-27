@@ -710,7 +710,7 @@ form button:hover {
 
 #continue-shopping {
   position: fixed; /* Ensures the button stays in the same place even when scrolling */
-  top: 10px;       /* Distance from the top of the page */
+  top: -5px;       /* Distance from the top of the page */
   left: 10px;      /* Distance from the left side of the page */
   background-color: #45b39d; /* Button background color */
   color: white;    /* Text color */
