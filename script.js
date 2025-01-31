@@ -130,12 +130,16 @@ function setupCheckoutPage() {
                 body: JSON.stringify({
                     access_key: "5ee3d9ce-182e-4515-9581-68be29efc36b", // Replace with your access key
                     name: name,
-                    email: email,
-                    message: `Order Details:\n${orderDetails}\n\nTotal: $${totalPrice}\n\nShipping Address: ${address}`
+                    email: email, // Ensure the email is sent to the user's provided email address
+                    message: `Order Details:\n${orderDetails}\n\nTotal: $${totalPrice}\n\nShipping Address: ${address}`,
+                    subject: "Your P.A.R.T.S Order Invoice", // Add a subject for the email
+                    from_name: "P.A.R.T.S", // Add a from name for the email
+                    reply_to: email // Ensure replies go to the user's email
                 })
             });
 
             const result = await response.json();
+            console.log(result); // Debugging: Log the result
 
             if (result.success) {
                 // Display confirmation message
