@@ -121,36 +121,50 @@ function setupCheckoutPage() {
             const orderDetails = cart.map(item => `${item.name} (Size: ${item.size}) - $${item.price.toFixed(2)}`).join("\n");
             const totalPrice = cart.reduce((sum, item) => sum + item.price, 0).toFixed(2);
 
+            // Debugging: Log the order details
+            console.log("Order Details:", orderDetails);
+            console.log("Total Price:", totalPrice);
+            console.log("Sending email to:", email);
+
             // Send email using web3forms API
-            const response = await fetch("https://api.web3forms.com/submit", {
-                method: "POST",
-                headers: {
-                    "Content-Type": "application/json"
-                },
-                body: JSON.stringify({
-                    access_key: "5ee3d9ce-182e-4515-9581-68be29efc36b", // Replace with your access key
-                    name: name,
-                    email: email,
-                    message: `Order Details:\n${orderDetails}\n\nTotal: $${totalPrice}\n\nShipping Address: ${address}`
-                })
-            });
+            try {
+                const response = await fetch("https://api.web3forms.com/submit", {
+                    method: "POST",
+                    headers: {
+                        "Content-Type": "application/json"
+                    },
+                    body: JSON.stringify({
+                        access_key: "8a9f9049-3b8c-409c-ae20-38398024f90a", // Replace with your access key
+                        name: name,
+                        email: email, // Ensure the email is sent to the user's provided email address
+                        message: `Order Details:\n${orderDetails}\n\nTotal: $${totalPrice}\n\nShipping Address: ${address}`,
+                        subject: "Your P.A.R.T.S Order Invoice", // Add a subject for the email
+                        from_name: "P.A.R.T.S", // Add a from name for the email
+                        reply_to: email // Ensure replies go to the user's email
+                    })
+                });
 
-            const result = await response.json();
+                const result = await response.json();
+                console.log("Web3Forms Response:", result); // Debugging: Log the result
 
-            if (result.success) {
-                // Display confirmation message
-                confirmationMessage.style.display = "block";
+                if (result.success) {
+                    // Display confirmation message
+                    confirmationMessage.style.display = "block";
 
-                // Clear cart after purchase
-                cart = [];
-                localStorage.setItem("cart", JSON.stringify(cart));
+                    // Clear cart after purchase
+                    cart = [];
+                    localStorage.setItem("cart", JSON.stringify(cart));
 
-                // Redirect to shop page after a delay
-                setTimeout(() => {
-                    window.location.href = "shop.html";
-                }, 5000); // Redirect after 5 seconds
-            } else {
-                alert("Failed to send confirmation email. Please try again.");
+                    // Redirect to shop page after a delay
+                    setTimeout(() => {
+                        window.location.href = "shop.html";
+                    }, 5000); // Redirect after 5 seconds
+                } else {
+                    alert("Failed to send confirmation email. Please try again.");
+                }
+            } catch (error) {
+                console.error("Error sending email:", error); // Debugging: Log any errors
+                alert("An error occurred while sending the email. Please try again.");
             }
         });
     }
