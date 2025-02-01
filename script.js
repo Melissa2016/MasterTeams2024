@@ -307,7 +307,7 @@ function validateName() {
 function validateEmail() {
     const emailInput = document.getElementById('email');
     const errorMessage = document.getElementById('email-error');
-    const regex = /^[a-zA-Z.]+@[a-zA-Z]+\.[a-zA-Z]+$/;
+    const regex = /^[a-zA-Z0-9.]+@[a-zA-Z0-9]+\.[a-zA-Z]+$/;
 
     if (emailInput.value && !regex.test(emailInput.value)) {
         errorMessage.style.display = 'inline';
