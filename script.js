@@ -134,7 +134,7 @@ function setupCheckoutPage() {
                         "Content-Type": "application/json"
                     },
                     body: JSON.stringify({
-                        access_key: "8a9f9049-3b8c-409c-ae20-38398024f90a", // Replace with your access key
+                        access_key: "4b8b5686-0a4b-4aef-9f3d-d6809525625b", // Replace with your access key
                         name: name,
                         email: email, // Ensure the email is sent to the user's provided email address
                         message: `Order Details:\n${orderDetails}\n\nTotal: $${totalPrice}\n\nShipping Address: ${address}`,
