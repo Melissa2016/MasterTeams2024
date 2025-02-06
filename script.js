@@ -96,6 +96,7 @@ function setupCartPage() {
     }
 }
 
+
 // On the checkout page, handle form submission
 function setupCheckoutPage() {
     const checkoutForm = document.getElementById("checkout-form");
@@ -112,21 +113,25 @@ function setupCheckoutPage() {
         checkoutForm.addEventListener("submit", async (e) => {
             e.preventDefault();
 
-            // Get form data
             const name = document.getElementById("name").value;
             const address = document.getElementById("address").value;
             const email = document.getElementById("email").value;
 
-            // Prepare order details
+            // Validation (client-side) -  You can add more robust validation here
+            if (!name || !address || !email) {
+                alert("Please fill in all required fields.");
+                return; // Stop form submission
+            }
+
+            if (document.getElementById('name-error').style.display === 'inline' || document.getElementById('email-error').style.display === 'inline') {
+                alert("Please correct the errors in the form.");
+                return;
+            }
+
+
             const orderDetails = cart.map(item => `${item.name} (Size: ${item.size}) - $${item.price.toFixed(2)}`).join("\n");
             const totalPrice = cart.reduce((sum, item) => sum + item.price, 0).toFixed(2);
 
-            // Debugging: Log the order details
-            console.log("Order Details:", orderDetails);
-            console.log("Total Price:", totalPrice);
-            console.log("Sending email to:", email);
-
-            // Send email using web3forms API
             try {
                 const response = await fetch("https://api.web3forms.com/submit", {
                     method: "POST",
@@ -134,41 +139,36 @@ function setupCheckoutPage() {
                         "Content-Type": "application/json"
                     },
                     body: JSON.stringify({
-                        access_key: "4b8b5686-0a4b-4aef-9f3d-d6809525625b", // Replace with your access key
+                        access_key: "4b8b5686-0a4b-4aef-9f3d-d6809525625b",
                         name: name,
-                        email: email, // Ensure the email is sent to the user's provided email address
+                        email: email,
                         message: `Order Details:\n${orderDetails}\n\nTotal: $${totalPrice}\n\nShipping Address: ${address}`,
-                        subject: "Your P.A.R.T.S Order Invoice", // Add a subject for the email
-                        from_name: "P.A.R.T.S", // Add a from name for the email
-                        reply_to: email // Ensure replies go to the user's email
+                        subject: "Your P.A.R.T.S Order Invoice",
+                        from_name: "P.A.R.T.S",
+                        reply_to: email
                     })
                 });
 
                 const result = await response.json();
-                console.log("Web3Forms Response:", result); // Debugging: Log the result
 
                 if (result.success) {
-                    // Display confirmation message
                     confirmationMessage.style.display = "block";
-
-                    // Clear cart after purchase
                     cart = [];
                     localStorage.setItem("cart", JSON.stringify(cart));
-
-                    // Redirect to shop page after a delay
                     setTimeout(() => {
                         window.location.href = "shop.html";
-                    }, 5000); // Redirect after 5 seconds
+                    }, 5000);
                 } else {
                     alert("Failed to send confirmation email. Please try again.");
                 }
             } catch (error) {
-                console.error("Error sending email:", error); // Debugging: Log any errors
-                alert("An error occurred while sending the email. Please try again.");
+                console.error("Error sending email:", error);
+                alert("An error occurred. Please try again.");
             }
         });
     }
 }
+
 
 // On the shop page, handle "Add to Cart" with size selection
 function setupShopPage() {
@@ -304,6 +304,7 @@ const booksSet7 = [
 ];
 document.getElementById("set-7-category").addEventListener("click", () => toggleBookSet(7, booksSet7));
 
+
 // Form Validation for Name
 function validateName() {
     const nameInput = document.getElementById('name');
@@ -330,6 +331,7 @@ function validateEmail() {
     }
 }
 
+
 // Contact Form Submission Handling
 document.addEventListener('DOMContentLoaded', function () {
     const contactForm = document.getElementById('contact-form');
@@ -352,3 +354,4 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     });
 });
+
